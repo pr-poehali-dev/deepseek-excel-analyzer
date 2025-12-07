@@ -202,11 +202,15 @@ const Index = () => {
                 Перетащите файл .xlsx или .xls сюда, либо нажмите кнопку для выбора
               </p>
               
-              <label htmlFor="file-upload">
-                <Button className="glow-effect">
-                  <Icon name="FolderOpen" size={18} className="mr-2" />
-                  Выбрать файл
-                </Button>
+              <div>
+                <label htmlFor="file-upload">
+                  <Button className="glow-effect" type="button" asChild>
+                    <span>
+                      <Icon name="FolderOpen" size={18} className="mr-2" />
+                      Выбрать файл
+                    </span>
+                  </Button>
+                </label>
                 <input
                   id="file-upload"
                   type="file"
@@ -214,7 +218,7 @@ const Index = () => {
                   onChange={handleFileSelect}
                   className="hidden"
                 />
-              </label>
+              </div>
             </div>
           </Card>
         ) : (
